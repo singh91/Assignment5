@@ -2,10 +2,33 @@
 <!DOCTYPE glassfish-web-app PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Servlet 3.0//EN" "http://glassfish.org/dtds/glassfish-web-app_3_0-1.dtd">
 <glassfish-web-app error-url="">
   <context-root>/Assignment_5</context-root>
+  <security-role-mapping>
+    <role-name>Role Name</role-name>
+    <principal-name>Description</principal-name>
+  </security-role-mapping>
+  <servlet>
+    <servlet-name>NewServlet1</servlet-name>
+    <servlet-class>Servlet.NewServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewServlet1</servlet-name>
+    <url-pattern>/NewServlet1</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>
+            30
+        </session-timeout>
+  </session-config>
+  <service-ref>
+    <service-ref-name>service_ref2</service-ref-name>
+  </service-ref>
   <class-loader delegate="true"/>
   <jsp-config>
     <property name="keepgenerated" value="true">
       <description>Keep a copy of the generated servlet class' java code.</description>
     </property>
   </jsp-config>
+  <webservice-description>
+    <webservice-description-name>Welcome Files</webservice-description-name>
+  </webservice-description>
 </glassfish-web-app>
